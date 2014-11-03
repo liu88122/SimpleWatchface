@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:timely="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:deviceIds="wear_square"
+    android:background="@drawable/watch_background">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <com.github.adnansm.timelytextview.TimelyView
+            android:id="@+id/hour_ten_digit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            timely:textColor="@android:color/white"
+            timely:strokeWidth="2px"
+           />
+
+        <com.github.adnansm.timelytextview.TimelyView
+            android:id="@+id/hour_unit_digit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/hour_ten_digit"
+            timely:textColor="@android:color/white"
+            timely:strokeWidth="2px"
+            />
+
+        <TextView
+            android:id="@+id/hour_minute_seperator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/hour_unit_digit"
+            android:text=":"/>
+
+        <com.github.adnansm.timelytextview.TimelyView
+            android:id="@+id/minute_ten_digit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            timely:textColor="@android:color/white"
+            timely:strokeWidth="2px"
+            android:layout_toRightOf="@+id/hour_minute_seperator"
+            />
+
+        <com.github.adnansm.timelytextview.TimelyView
+            android:id="@+id/minute_unit_digit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/minute_ten_digit"
+            timely:textColor="@android:color/white"
+            timely:strokeWidth="2px"
+            />
+
+        <com.github.adnansm.timelytextview.TimelyView
+            android:id="@+id/second_ten_digit"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            timely:textColor="@android:color/white"
+            timely:strokeWidth="2px"
+            android:layout_toRightOf="@+id/minute_unit_digit"
+            android:layout_alignBottom="@+id/minute_unit_digit"
+            />
+
+        <com.github.adnansm.timelytextview.TimelyView
+            android:id="@+id/second_unit_digit"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@+id/second_ten_digit"
+            android:layout_alignBottom="@+id/second_ten_digit"
+            timely:textColor="@android:color/white"
+            timely:strokeWidth="2px"
+            />
+
+        </RelativeLayout>
+</RelativeLayout>
