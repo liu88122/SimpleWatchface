@@ -29,6 +29,7 @@ public class TimelyView extends View {
     private Paint mPaint = null;
     private Path mPath = null;
     private float[][] controlPoints = null;
+    private float mStrokeWidth = 5.0f;
 
     public TimelyView(Context context) {
         super(context);
@@ -79,6 +80,7 @@ public class TimelyView extends View {
         int width = getMeasuredWidth();
 
         float minDimen = height > width ? width : height;
+        minDimen = minDimen - (mStrokeWidth/2 + 1);
 
         mPath.reset();
         mPath.moveTo(minDimen * controlPoints[0][0], minDimen * controlPoints[0][1]);
@@ -114,16 +116,15 @@ public class TimelyView extends View {
     private void init(TypedArray typedArray) {
         // A new paint with the style as stroke.
         int textColor = Color.BLACK;
-        float strokeWidth = 5.0f;
         if (typedArray != null) {
             textColor = typedArray.getColor(R.styleable.TimelyView_textColor, Color.BLACK);
-            strokeWidth = typedArray.getDimension(R.styleable.TimelyView_strokeWidth, 5.0f);
+            mStrokeWidth = typedArray.getDimension(R.styleable.TimelyView_strokeWidth, 5.0f);
             typedArray.recycle();
         }
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
         mPaint.setColor(textColor);
-        mPaint.setStrokeWidth(strokeWidth);
+        mPaint.setStrokeWidth(mStrokeWidth);
         mPaint.setStyle(Paint.Style.STROKE);
         mPath = new Path();
     }

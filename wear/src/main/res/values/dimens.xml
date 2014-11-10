@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="timely_num_width">80dp</dimen>
+    <dimen name="timely_num_height">80dp</dimen>
+    <dimen name="timely_stroke_width">2px</dimen>
+    <dimen name="timely_margin_left">-15dp</dimen>
+</resources>

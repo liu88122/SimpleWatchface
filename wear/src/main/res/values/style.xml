@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TimelyNumberAppearance">
+        <item name="android:layout_width">@dimen/timely_num_width</item>
+        <item name="android:layout_height">@dimen/timely_num_height</item>
+    </style>
+
+    <style name="TimelyNumberAppearance.Small">
+
+    </style>
+</resources>

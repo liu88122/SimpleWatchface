@@ -17,22 +17,22 @@
 
         <com.github.adnansm.timelytextview.TimelyView
             android:id="@+id/hour_ten_digit"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            style="@style/TimelyNumberAppearance"
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             timely:textColor="@android:color/white"
             timely:strokeWidth="2px"
-           />
+
+            />
 
         <com.github.adnansm.timelytextview.TimelyView
             android:id="@+id/hour_unit_digit"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            style="@style/TimelyNumberAppearance"
             android:layout_gravity="center"
             android:layout_toRightOf="@+id/hour_ten_digit"
             timely:textColor="@android:color/white"
             timely:strokeWidth="2px"
+            android:layout_marginLeft="@dimen/timely_margin_left"
             />
 
         <TextView
@@ -44,8 +44,7 @@
 
         <com.github.adnansm.timelytextview.TimelyView
             android:id="@+id/minute_ten_digit"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            style="@style/TimelyNumberAppearance"
             android:layout_centerVertical="true"
             timely:textColor="@android:color/white"
             timely:strokeWidth="2px"
@@ -54,8 +53,7 @@
 
         <com.github.adnansm.timelytextview.TimelyView
             android:id="@+id/minute_unit_digit"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            style="@style/TimelyNumberAppearance"
             android:layout_gravity="center"
             android:layout_toRightOf="@+id/minute_ten_digit"
             timely:textColor="@android:color/white"
@@ -82,5 +80,5 @@
             timely:strokeWidth="2px"
             />
 
-        </RelativeLayout>
+    </RelativeLayout>
 </RelativeLayout>
